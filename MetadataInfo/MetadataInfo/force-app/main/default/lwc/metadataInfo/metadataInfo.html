@@ -1,0 +1,25 @@
+<template>
+    <h2>Hkhdshsa</h2>
+    <lightning-card title="Used Custom Metadata" icon-name="custom:custom10">
+        <div class="slds-grid">
+            <div class="slds-size--1-of-1">
+               <div>
+                    <lightning-button label="Export in CSV" onclick={handleFileDownload}></lightning-button>    
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <!-- Simple -->
+            <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search"
+            value={searchKey}></lightning-input>
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-tree-grid
+                    columns={columns}
+                    data={gridData}
+                    key-field="MetadataComponentName"
+                ></lightning-tree-grid>
+            </div>
+        </div>
+    </lightning-card>
+</template>
